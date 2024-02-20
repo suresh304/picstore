@@ -1,0 +1,25 @@
+{
+  "uid": "9A95CGjqhSNa92vl3UKLEMhnObp1",
+  "email": "suresh@gmail.com",
+  "emailVerified": false,
+  "isAnonymous": false,
+  "providerData": [
+    {
+      "providerId": "password",
+      "uid": "suresh@gmail.com",
+      "displayName": null,
+      "email": "suresh@gmail.com",
+      "phoneNumber": null,
+      "photoURL": null
+    }
+  ],
+  "stsTokenManager": {
+    "refreshToken": "AMf-vBwKGxKf4AvEIDfZ4Np0t1qZ1b6fkL3LlFGibNrqvd04y2C2RHzib5q3T3YifSMyeZNHCofcGm9iAU34s8mvaIP2X4Avi34mhUinA11fB_BwgyOPY-7bBw_xqr1IDXZE4LUPVfeS6jmQTTgVy_2gK1HnhI31WEV_nujKf5s12nSq7IkIy1SRmHbRc4MMivkGUae3BRZkyesWSPDqIwDht94MtN9LUw",
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFlYzU4NjcwNGNhOTZiZDcwMzZiMmYwZDI4MGY5NDlmM2E5NzZkMzgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGljc3RvcmUtOGMyZTciLCJhdWQiOiJwaWNzdG9yZS04YzJlNyIsImF1dGhfdGltZSI6MTcwODQwNjgyNywidXNlcl9pZCI6IjlBOTVDR2pxaFNOYTkydmwzVUtMRU1obk9icDEiLCJzdWIiOiI5QTk1Q0dqcWhTTmE5MnZsM1VLTEVNaG5PYnAxIiwiaWF0IjoxNzA4NDA2ODI3LCJleHAiOjE3MDg0MTA0MjcsImVtYWlsIjoic3VyZXNoQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJzdXJlc2hAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.PHck-O8WQseUas-8m2_VNIMVSG2tf6hxHMwQL-gs2Del0_Yn5tcK2vkK7k-HueSgSsa52aDwrCdC37dgDDDfoUdN8BzTL76wDJMsts-nRWc-9JFN-GsiIkSlupJg9ML4PWqT2Nc2e7Bo7kWz700Zvgfs3MgdZiOpq3ppd32iH6hmeeqVi0ngOH-J-13PN3pekQSMyTwztY_a_ea2aZ_PQYqJQLXe41eyAmBx7EgE-MhMqn3iQLE1TuOogb1vlHk1rOV-Hjq0DYRYpMmReMg9cymMpOEzUh3JkcIP5lSIRc-tYjvMkg2jZKyvOmjoWVbsyB7_yp3z1tAsko4tdCEAyw",
+    "expirationTime": 1708410427323
+  },
+  "createdAt": "1708195793933",
+  "lastLoginAt": "1708406827198",
+  "apiKey": "AIzaSyCmPdR2G103-N2FcCZjE5qJNz3Jm7X6pJ8",
+  "appName": "[DEFAULT]"
+}

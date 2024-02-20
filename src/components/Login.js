@@ -1,16 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useReducer, useState } from "react";
 import picstorelogo from "../images/galleryicon.webp";
 
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { authContext } from "../context/authContext";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser } from "../slices/authSlice";
 
 const Login = () => {
   const navigate = useNavigate()
   const [registered, setRegistered] = useState(true);
-  const { user, setUser } = useContext(authContext);
+  const user_rdx = useSelector(state=>state.user)
+  const dispatch = useDispatch()
   const signUpHandler = (e) => {
     e.preventDefault();
     const email = e.target[1].value;
@@ -18,10 +21,11 @@ const Login = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed up
-        setUser(userCredential.user);
+        
+        dispatch(addUser(JSON.stringify(userCredential.user)))
 
-        console.log(userCredential.user);
-        // ...
+
+        
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -35,13 +39,17 @@ const Login = () => {
 
     const email = e.target[0].value;
     const password = e.target[1].value;
-    console.log({email,password})
 
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        setUser(userCredential.user)
+        dispatch(addUser(JSON.stringify(userCredential.user)))
+
+
+        localStorage.setItem("user",userCredential.user.email)
+
+
         navigate("/home")
         // ...
       })
@@ -94,7 +102,7 @@ const Login = () => {
         </p>
       </form>
     </div>
-  );
+  )
 };
 
 export default Login;

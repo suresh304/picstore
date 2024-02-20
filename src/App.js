@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login";
 import Home from "./components/Home";
@@ -6,14 +6,17 @@ import { useState } from "react";
 import { authContext } from "./context/authContext";
 import PrivateRoute from "./PrivateRoute";
 import Header from "./components/Header";
+import Mystory from "./components/Mystory";
+import { useSelector } from "react-redux";
 
 function App() {
-  const [user, setUser] = useState();
+  const user_rdx = JSON.parse(useSelector((state) => state.user))
   const appRouter = createBrowserRouter([
     {
       path: "/",
-      element: <Login />,
+      element: !user_rdx?<Login/>:<Navigate to="/home"/>,
     },
+    
     {
       path: "home",
       element: (
@@ -22,15 +25,26 @@ function App() {
         </PrivateRoute>
       ),
     },
+    {
+      path: "Mystory",
+      element: (
+        <PrivateRoute>
+          <Mystory />
+         </PrivateRoute>
+      ),
+    },
   ]);
   return (
     <div>
-      <authContext.Provider value={{ user, setUser }}>
+      
         <Header/>
         <RouterProvider router={appRouter} />
-      </authContext.Provider>
+      
     </div>
   );
 }
 
 export default App;
+
+// suresh@gmail.com
+// Suresh143@
